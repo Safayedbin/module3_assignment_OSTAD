@@ -8,6 +8,7 @@
 print_r($numbers);
 
 function task2($array) {
+    $ress=[];   
     $i = 0;
     $len = count($array);
     while ($i < $len) {
@@ -15,9 +16,14 @@ function task2($array) {
         if ( $array[$i] % 2 == 0) {
             array_splice($array, $i, 1);
         }
+       // if ( $array[$i] % 2 != 0) {
+        //    array_push($ress, $array[$i]);
+       // }
         $i++;
     }
     print_r($array);
+    //print_r($ress);
+    //return $ress;
 }
 
 task2($numbers);
